@@ -1,0 +1,32 @@
+#N canvas 1076 23 1034 518 10;
+#X obj 397 112 inlet;
+#X obj 334 408 outlet;
+#X obj 657 129 inlet;
+#X text 344 113 on/off;
+#X text 581 112 repeats;
+#X obj 416 398 float;
+#X obj 612 401 - 1;
+#X obj 438 301 sel 0;
+#X msg 427 160 stop;
+#X obj 431 274 float 0;
+#X obj 445 457 outlet;
+#X obj 335 157 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 566 178 5 0 0 0 - - -, f 5;
+#X obj 388 431 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 388 231 metro 300;
+#X obj 474 433 print;
+#X obj 271 182 delay 10 1 msec;
+#X connect 0 0 16 0;
+#X connect 2 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 0 10 0;
+#X connect 5 0 7 0;
+#X connect 6 0 5 1;
+#X connect 7 0 9 0;
+#X connect 8 0 14 0;
+#X connect 9 0 14 0;
+#X connect 14 0 5 0;
+#X connect 14 0 1 0;
+#X connect 16 0 14 0;
