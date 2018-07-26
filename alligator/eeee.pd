@@ -17,12 +17,12 @@
 #X obj 251 209 unpack float float;
 #X obj 249 165 repack 2;
 #X floatatom 350 419 5 0 0 0 - - -, f 5;
-#X obj 241 396 counter;
 #X obj 306 329 sel 0;
+#X obj 241 396 counter;
 #X connect 0 0 4 0;
 #X connect 1 0 2 0;
 #X connect 1 0 2 1;
-#X connect 3 1 16 1;
+#X connect 3 1 17 1;
 #X connect 4 0 14 0;
 #X connect 5 0 4 0;
 #X connect 5 0 9 0;
@@ -31,8 +31,8 @@
 #X connect 9 0 14 0;
 #X connect 13 0 3 0;
 #X connect 13 1 12 0;
-#X connect 13 1 17 0;
+#X connect 13 1 16 0;
 #X connect 14 0 13 0;
-#X connect 16 0 7 0;
-#X connect 16 1 15 0;
-#X connect 17 1 16 0;
+#X connect 16 1 17 0;
+#X connect 17 0 7 0;
+#X connect 17 1 15 0;
