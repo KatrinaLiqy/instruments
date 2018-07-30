@@ -1,0 +1,16 @@
+#N canvas 0 23 1294 833 10;
+#X obj 552 49 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 458 135 print b;
+#X obj 521 485 readsf~;
+#X obj 547 564 dac~;
+#X msg 535 376 open 01.wav \, 1;
+#X obj 551 231 counter;
+#X obj 647 61 float 1;
+#X connect 0 0 5 1;
+#X connect 0 0 6 0;
+#X connect 2 0 3 0;
+#X connect 2 0 3 1;
+#X connect 4 0 2 0;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
