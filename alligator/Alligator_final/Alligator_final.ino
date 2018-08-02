@@ -49,19 +49,22 @@ void loop() {
   {
       if (buttons[i] == 0 && (buttons[i] != old_buttons[i]))
     {
-        if(pressesChange % 2 == 0)
+        if(pressesChange % 3 == 0)
         {
          // Serial.print("changing button = ");
           //Serial.println(changingButton);
           delays[i] += 125;
           copy_delays[i] = delays[i];
         }
-        else
+        if (pressesChange % 3 == 1)
         {
           
           //Serial.print("changing button = ");
           //Serial.println(changingButton);
           repeats[i] += 1;
+        }
+        else{
+          copy_delays[i] += 125;
         }
 
     }
@@ -75,12 +78,15 @@ void loop() {
           delays[i] -= 125;
           copy_delays[i] = delays[i];
         }
-        else
+        (pressesChange % 3 == 1)
         {
           
           //Serial.print("changing button = ");
           //Serial.println(changingButton);
           repeats[i] -= 1;
+        }
+        else{
+          copy_delays[i] -= 125
         }
     }
    else if (delays[i] <= 0){delays[i] = 1000;} 
